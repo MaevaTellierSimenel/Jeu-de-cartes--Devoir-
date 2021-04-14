@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 
-void Monstre::attack(int _attackscore, bool _exhausted, int attackUs, bool _dead){
+void Monstre::attack(int attackUs){
     if ((_exhausted) ==  false && (_dead) == false){
         attackUs = (_attackscore);
         std::cout<<"Votre monstre inflige "<<attackUs<<" dégâts au monstre adverse."<<std::endl;
@@ -17,7 +17,7 @@ void Monstre::attack(int _attackscore, bool _exhausted, int attackUs, bool _dead
     return;
 }
 
-void Monstre::damagetook(int _lifepoints, int attackEnnemy, bool _dead){
+void Monstre::damagetook(int attackEnnemy){
     if ((_dead) == false){
         (_lifepoints) = (_lifepoints)-attackEnnemy;
         std::cout<<"L'adversaire a infligé "<<attackEnnemy<<" de dégâts à votre monstre, il lui reste "<<(_lifepoints)<<" points de vie."<<std::endl;
@@ -28,15 +28,16 @@ void Monstre::damagetook(int _lifepoints, int attackEnnemy, bool _dead){
     return;
 }
 
-void Monstre::testdead(int _lifepoints, bool _dead){
+bool Monstre::testdead(){
     if ((_lifepoints) <= 0){
         (_dead) = true;
         std::cout<<"Votre monstre est mort."<<std::endl;
+        return true;
     }
-    return;
+    return false;
 }
 
-void Monstre::printmonster(int _attackscore, int _lifepoints, bool _exhausted, bool _dead, std::string _name){
+void Monstre::printmonster(){
     std::cout<<"Monstre sélectionné : "<<(_name)<<std::endl<< "Points de vie : "<<(_lifepoints)<<std::endl<<"Dégâts d'attaque : "<<(_attackscore)<<std::endl;
     if ((_exhausted) == true && (_dead) == false){
         std::cout<<"Statut : Fatigué"<<std::endl;
