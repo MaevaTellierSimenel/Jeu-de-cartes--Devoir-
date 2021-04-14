@@ -21,7 +21,7 @@ bool Mage::getNewMonster(){
         }
         return;
     }
-    return true;
+    return;
 }
 
 bool Mage::attackChoice(){
@@ -51,7 +51,7 @@ void Mage::mageTookDamages(int attackEnnemy){
         (_magelifepoints) = (_magelifepoints)-attackEnnemy;
         std::cout<<"L'adversaire  vous a infligé "<<attackEnnemy<<" de dégâts, il vous reste "<<(_magelifepoints)<<" points de vie."<<std::endl;
     }
-    else {
+    else{
         std::cout<<"Vous êtes déjà mort, vous ne prendrez pas de dégâts."<<std::endl;
     }
     return;
