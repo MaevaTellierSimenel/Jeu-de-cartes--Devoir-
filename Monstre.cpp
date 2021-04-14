@@ -18,9 +18,14 @@ void Monstre::attack(int _attackscore, bool _exhausted, int attackUs, bool _dead
     return;
 }
 
-void Monstre::damagetook(int _lifepoints, int attackEnnemy){
-    (_lifepoints) = (_lifepoints)-attackEnnemy;
-    std::cout<<"L'adversaire a infligé "<<attackEnnemy<<" de dégâts à votre monstre, il lui reste "<<(_lifepoints)<<" points de vie."<<std::endl;
+void Monstre::damagetook(int _lifepoints, int attackEnnemy, bool _dead){
+    if ((_dead) == false){
+        (_lifepoints) = (_lifepoints)-attackEnnemy;
+        std::cout<<"L'adversaire a infligé "<<attackEnnemy<<" de dégâts à votre monstre, il lui reste "<<(_lifepoints)<<" points de vie."<<std::endl;
+    }
+    else {
+        std::cout<<"Votre monstre est déjà mort, il ne prendra pas de dégâts."<<std::endl;
+    }
     return;
 }
 
