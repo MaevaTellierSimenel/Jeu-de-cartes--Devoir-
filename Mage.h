@@ -16,6 +16,7 @@ class Mage{
         void mageTookDamages(int attack);
         bool magetestdead();
         void manaback();
+        void lifeback();
         int getmana();
         void printmage();
 
