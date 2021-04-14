@@ -10,8 +10,8 @@ class Monstre {
         std::string _name;
 
     public :
-        void attack(int attackscore, bool exhausted);
-        void damagedtook(int lifepoints, int attackscoreAutre);
+        void attack(int attackscore, bool exhausted, int attackUs);
+        void damagetook(int lifepoints, int attackscoreAutre);
         void testdead(int lifepoints, bool dead);
         void printmonster(int attackscore, int lifepoints, bool exhausted, bool dead, std::string name);
 
