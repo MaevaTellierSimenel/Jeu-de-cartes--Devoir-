@@ -37,6 +37,10 @@ bool Monstre::testdead(){
     return false;
 }
 
+void Monstre::lifeback(){
+    (_lifepoints)=(_lifepoints)+25
+}
+
 void Monstre::printmonster(){
     std::cout<<"Monstre sélectionné : "<<(_name)<<std::endl<< "Points de vie : "<<(_lifepoints)<<std::endl<<"Dégâts d'attaque : "<<(_attackscore)<<std::endl;
     if ((_exhausted) == true && (_dead) == false){
