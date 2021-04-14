@@ -37,6 +37,16 @@ void Monstre::testdead(int _lifepoints, bool _dead){
     return;
 }
 
-void Monstre::printmonster(int attackscore, int lifepoints, bool exhausted, bool dead, std::string name){
-
+void Monstre::printmonster(int _attackscore, int _lifepoints, bool _exhausted, bool _dead, std::string _name){
+    std::cout<<"Monstre sélectionné : "<<(_name)<<std::endl<< "Points de vie : "<<(_lifepoints)<<std::endl<<"Dégâts d'attaque : "<<(_attackscore)<<std::endl;
+    if ((_exhausted) == true && (_dead) == false){
+        std::cout<<"Statut : Fatigué"<<std::endl;
+    }
+    else if ((_dead) == true){
+        std::cout<<"Statut : Mort"<<std::endl;
+    }
+    else {
+        std::cout<<"Statut : En forme"<<std::endl;
+    }
+    return;
 }
