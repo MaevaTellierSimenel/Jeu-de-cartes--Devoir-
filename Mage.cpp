@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 
-bool getNewMonster(){
+bool Mage::getNewMonster(){
     bool i = false;
     std::string answer;
     while (i == false){
@@ -19,15 +19,40 @@ bool getNewMonster(){
         else {
             i = false;
         }
+        return;
     }
-    
-
+    return;
 }
 
-void attackChoice(){
-
+bool Mage::attackChoice(){
+    bool i = false;
+    std::string answer;
+    while (i ==false){
+        std::cout<<"Que voulez-vous attaquer ? Le Mage adverse ou un de ses Monstres ?"<<std::endl;
+        std::cin>>answer;
+        if (answer == "Mage"){
+            i = true;
+            return true;    
+        }
+        else if (answer == "Monstre"){
+            i = true;
+            return false;
+        }
+        else{
+            i = false;
+        }
+        return;
+    }
+    return;
 }
 
-void mageTookDamages(){
-
+void Mage::mageTookDamages(int attackEnnemy){
+    if ((_magedead) == false){
+        (_magelifepoints) = (_magelifepoints)-attackEnnemy;
+        std::cout<<"L'adversaire  vous a infligé "<<attackEnnemy<<" de dégâts, il vous reste "<<(_magelifepoints)<<" points de vie."<<std::endl;
+    }
+    else {
+        std::cout<<"Vous êtes déjà mort, vous ne prendrez pas de dégâts."<<std::endl;
+    }
+    return;
 }
