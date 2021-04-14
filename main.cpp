@@ -13,14 +13,17 @@ int main(){
     Monstre monMonstre(10, 50, "Carl");
     Monstre monstreEnnemi(5, 20, "Bruh");
 
-    Mage myself ("Random", 10000);
+    Mage me ("Random", 10000);
     Mage ennemy ("Simp", 50);
 
-    myself.getNewMonster();
+    me.getNewMonster();
     ennemy.getNewMonster();
-    myself.attackChoice();
-    ennemy.attackchoice();
-    
+    me.attackChoice();
+    ennemy.attackChoice();
+    me.mageTookDamages();
+    ennemy.mageTookDamages();
+    me.printmage();
+    ennemy.printmage();
 
     while(monMonstre.testdead()== false && monstreEnnemi.testdead()== false){
         monMonstre.attack(attackUs);
