@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <cstdlib>
 #include "Monstre.h"
 
 using namespace std;
@@ -30,14 +31,20 @@ int main(){
         if (monMonstre.testdead()==true && me.getNewMonster() == true && me.magetestdead()==false){
             cout<<"____________________ Nouveau Monstre Joueur 1 ____________________"<<endl;
             if(me.getmana()>= 8){
-                cout<<"Rentrez les dégâts de votre nouveau monstre : ";
-                cin>>newMonsterAttack;
-                cout<<"Rentrez les points de vie de votre nouveau monstre : ";
-                cin>>newMonsterLifepoints;
-                cout<<"Rentrez le nom de votre nouveau monstre : ";
-                cin>> newMonsterName;
 
-                Monstre monMonstre(newMonsterAttack, newMonsterLifepoints, newMonsterName);
+                cout<<"Vous piochez une carte :"<<endl;
+
+                int carte = rand()%3;
+
+                if (carte == 1){
+                    Monstre monMonstre(10,50,"Carl");
+                }
+                else if (carte ==2){
+                    Monstre monMonstre(5,20,"Bruh");
+                }
+                else{
+                    Monstre monMonstre(10,15,"Brunhilde");
+                }
             }
             else{
                 cout<<"Vous n'avez pas assez de mana pour invoquer un nouveau monstre."<<endl;
@@ -48,14 +55,19 @@ int main(){
         if (monstreEnnemi.testdead()==true && ennemy.getNewMonster() == true && ennemy.magetestdead()==false){
             cout<<"____________________ Nouveau Monstre Joueur 2 ____________________"<<endl;
             if(ennemy.getmana()>= 8){
-                cout<<"Rentrez les dégâts de votre nouveau monstre : ";
-                cin>>newMonsterAttack;
-                cout<<"Rentrez les points de vie de votre nouveau monstre : ";
-                cin>>newMonsterLifepoints;
-                cout<<"Rentrez le nom de votre nouveau monstre : ";
-                cin>> newMonsterName;
+                cout<<"Vous piochez une carte :"<<endl;
 
-                Monstre monstreEnnemi(newMonsterAttack, newMonsterLifepoints, newMonsterName);
+                int carte = rand()%3;
+
+                if (carte == 1){
+                    Monstre monstreEnnemi(10,50,"Carl");
+                }
+                else if (carte ==2){
+                    Monstre monstreEnnemi(5,20,"Bruh");
+                }
+                else{
+                    Monstre monstreEnnemi(10,15,"Brunhilde");
+                }
             }
             else{
                 cout<<"Vous n'avez pas assez de mana pour invoquer un nouveau monstre."<<endl;
