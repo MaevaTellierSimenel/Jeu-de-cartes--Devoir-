@@ -56,3 +56,9 @@ void Mage::mageTookDamages(int attackEnnemy){
     }
     return;
 }
+
+void Mage::printmage(){
+    std::cout<<"Vous êtes : "<<(_magename)<<std::endl<< "Points de vie : "<<(_magelifepoints)<<std::endl;
+}
+
+Mage::Mage(std::string magename, int magelifepoints){ _magename = a, magelifepoints = b}
