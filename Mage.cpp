@@ -66,7 +66,15 @@ bool Mage::magetestdead(){
     return false;
 }
 
-void Mage::printmage(){
+void Mage::manaback(){
+    (_manapoints) = 10;
+}
+
+void Mage::getmana(){
+    return _manapoints;
+}
+
+int Mage::printmage(){
     std::cout<<"Vous êtes : "<<(_magename)<<std::endl<< "Points de vie : "<<(_magelifepoints)<<std::endl;
 }
 
