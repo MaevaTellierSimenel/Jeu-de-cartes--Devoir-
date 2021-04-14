@@ -9,7 +9,6 @@ class Mage{
         bool _magedead;
         bool _magedead;
         float _mageChoice;
-        std::string _magearrayofmonsters[];
     
     public :
         bool getNewMonster();
