@@ -11,7 +11,7 @@ class Monstre {
 
     public :
         void attack(int attackscore, bool exhausted, int attackUs, bool dead);
-        void damagetook(int lifepoints, int attackscoreAutre);
+        void damagetook(int lifepoints, int attackscoreAutre, bool dead);
         void testdead(int lifepoints, bool dead);
         void printmonster(int attackscore, int lifepoints, bool exhausted, bool dead, std::string name);
 
