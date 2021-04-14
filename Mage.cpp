@@ -21,7 +21,7 @@ bool Mage::getNewMonster(){
         }
         return;
     }
-    return;
+    return true;
 }
 
 bool Mage::attackChoice(){
