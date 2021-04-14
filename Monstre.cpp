@@ -50,3 +50,5 @@ void Monstre::printmonster(int _attackscore, int _lifepoints, bool _exhausted, b
     }
     return;
 }
+
+Monstre::Monstre(int attackscore, int lifepoints, std::string name){_attackscore, _lifepoints, _name}
