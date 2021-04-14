@@ -8,12 +8,15 @@ class Mage{
         int _magelifepoints;
         bool _magedead;
         float _mageChoice;
+        int _manapoints = 10;
     
     public :
         bool getNewMonster();
         bool attackChoice();
-        void mageTookDamages();
+        void mageTookDamages(int attack);
         bool magetestdead();
+        void manaback();
+        int getmana();
         void printmage();
 
         Mage(std::string magename, int magelifepoints);
