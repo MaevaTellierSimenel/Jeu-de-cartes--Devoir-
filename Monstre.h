@@ -15,6 +15,5 @@ class Monstre {
         void testdead(int lifepoints, bool dead);
         void printmonster(int attackscore, int lifepoints, bool exhausted, bool dead, std::string name);
 
-        Monstre();
-        Monstre(int attackscore, int lifepoints, bool exhausted, bool dead, std::string name);
+        Monstre(int attackscore, int lifepoints, std::string name);
 };
