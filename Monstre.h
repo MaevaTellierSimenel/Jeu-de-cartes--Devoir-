@@ -2,7 +2,7 @@
 #include <string>
 #include "Mage.h"
 
-class Monstre : public Mage {
+class Monstre : virtual Mage {
     private :
         int _attackscore;
         bool _exhausted = false;
