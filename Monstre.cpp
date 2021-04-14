@@ -15,11 +15,13 @@ void Monstre::attack(int _attackscore, bool _exhausted, int attackUs, bool _dead
     else {
         std::cout<<"Votre monstre est mort, il ne peux plus être utiliser."<<std::endl;
     }
+    return;
 }
 
 void Monstre::damagetook(int _lifepoints, int attackEnnemy){
     (_lifepoints) = (_lifepoints)-attackEnnemy;
     std::cout<<"L'adversaire a infligé "<<attackEnnemy<<" de dégâts à votre monstre, il lui reste "<<(_lifepoints)<<" points de vie."<<std::endl;
+    return;
 }
 
 void Monstre::testdead(int _lifepoints, bool _dead){
@@ -27,6 +29,7 @@ void Monstre::testdead(int _lifepoints, bool _dead){
         (_dead) = true;
         std::cout<<"Votre monstre est mort."<<std::endl;
     }
+    return;
 }
 
 void Monstre::printmonster(int attackscore, int lifepoints, bool exhausted, bool dead, std::string name){
