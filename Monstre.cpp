@@ -1,7 +1,6 @@
 #include <vector>
 #include <string>
 #include <iostream>
-#include "Monstre.h"
 
 void Monstre::attack(int _attackscore, bool _exhausted, int attackUs, bool _dead){
     if ((_exhausted) ==  false && (_dead) == false){
@@ -51,4 +50,4 @@ void Monstre::printmonster(int _attackscore, int _lifepoints, bool _exhausted, b
     return;
 }
 
-Monstre::Monstre(int attackscore, int lifepoints, std::string name){_attackscore, _lifepoints, _name}
+Monstre::Monstre(int attackscore, int lifepoints, std::string name){_attackscore = a, _lifepoints = b, _name = c}
