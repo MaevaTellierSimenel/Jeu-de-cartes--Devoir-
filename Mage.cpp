@@ -57,6 +57,15 @@ void Mage::mageTookDamages(int attackEnnemy){
     return;
 }
 
+bool Mage::magetestdead(){
+    if ((_magelifepoints) <= 0){
+        (_magedead) = true;
+        std::cout<<"Vous êtes mort."<<std::endl;
+        return true;
+    }
+    return false;
+}
+
 void Mage::printmage(){
     std::cout<<"Vous êtes : "<<(_magename)<<std::endl<< "Points de vie : "<<(_magelifepoints)<<std::endl;
 }
