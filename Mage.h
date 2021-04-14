@@ -7,7 +7,6 @@ class Mage{
         std::string _magename;
         int _magelifepoints;
         bool _magedead;
-        bool _magedead;
         float _mageChoice;
     
     public :
