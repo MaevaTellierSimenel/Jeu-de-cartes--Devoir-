@@ -21,6 +21,51 @@ int main(){
 
     while (me.magetestdead()==false && ennemy.magetestdead()==false){
         
+        me.manaback();
+        ennemy.manaback();
+
+        monMonstre.testdead();
+        monstreEnnemi.testdead();
+
+        if (monMonstre.testdead()==true && me.getNewMonster() == true && me.magetestdead()==false){
+            cout<<"____________________ Nouveau Monstre Joueur 1 ____________________"<<endl;
+            if(me.getmana()>= 8){
+                cout<<"Rentrez les dégâts de votre nouveau monstre : ";
+                cin>>newMonsterAttack;
+                cout<<"Rentrez les points de vie de votre nouveau monstre : ";
+                cin>>newMonsterLifepoints;
+                cout<<"Rentrez le nom de votre nouveau monstre : ";
+                cin>> newMonsterName;
+
+                Monstre monMonstre(newMonsterAttack, newMonsterLifepoints, newMonsterName);
+            }
+            else{
+                cout<<"Vous n'avez pas assez de mana pour invoquer un nouveau monstre."<<endl;
+            }
+            cout<<"__________________________________________________________________"<<endl<<endl;
+        }
+
+        if (monstreEnnemi.testdead()==true && ennemy.getNewMonster() == true && ennemy.magetestdead()==false){
+            cout<<"____________________ Nouveau Monstre Joueur 2 ____________________"<<endl;
+            if(ennemy.getmana()>= 8){
+                cout<<"Rentrez les dégâts de votre nouveau monstre : ";
+                cin>>newMonsterAttack;
+                cout<<"Rentrez les points de vie de votre nouveau monstre : ";
+                cin>>newMonsterLifepoints;
+                cout<<"Rentrez le nom de votre nouveau monstre : ";
+                cin>> newMonsterName;
+
+                Monstre monstreEnnemi(newMonsterAttack, newMonsterLifepoints, newMonsterName);
+            }
+            else{
+                cout<<"Vous n'avez pas assez de mana pour invoquer un nouveau monstre."<<endl;
+            }
+            cout<<"__________________________________________________________________"<<endl<<endl;
+        }
+
+        //tour me
+        cout<<"____________________ Tour Joueur 1 ____________________"<<endl;
+        me.attackChoice();
         if (me.attackChoice()==true){
             monMonstre.attack(attackUs);
             ennemy.mageTookDamages(attackUs);
@@ -29,7 +74,13 @@ int main(){
             monMonstre.attack(attackUs);
             monstreEnnemi.damagetook(attackUs);
         }
+        cout<<"____________________ Tour Joueur 1 ____________________"<<endl;
+        cout<<"_______________________________________________________"<<endl;
 
+
+        //tour ennemy
+        cout<<"____________________ Tour Joueur 2 ____________________"<<endl<<endl;
+        ennemy.attackChoice();
         if (ennemy.attackChoice()==true){
             monstreEnnemi.attack(attackEnnemy);
             me.mageTookDamages(attackEnnemy);
@@ -38,35 +89,14 @@ int main(){
             monstreEnnemi.attack(attackEnnemy);
             monMonstre.damagetook(attackEnnemy);
         }
+        cout<<"_______________________________________________________"<<endl<<endl;
 
-        monMonstre.testdead();
-        monstreEnnemi.testdead();
-
-        if (monMonstre.testdead()==true && me.getNewMonster() == true && me.magetestdead()==false){
-            cout<<"Rentrez les dégâts de votre nouveau monstre : ";
-            cin>>newMonsterAttack;
-            cout<<"Rentrez les points de vie de votre nouveau monstre : ";
-            cin>>newMonsterLifepoints;
-            cout<<"Rentrez le nom de votre nouveau monstre : ";
-            cin>> newMonsterName;
-
-            Monstre monMonstre(newMonsterAttack, newMonsterLifepoints, newMonsterName);
-        }
-
-        if (monstreEnnemi.testdead()==true && ennemy.getNewMonster() == true && ennemy.magetestdead()==false){
-            cout<<"Rentrez les dégâts de votre nouveau monstre : ";
-            cin>>newMonsterAttack;
-            cout<<"Rentrez les points de vie de votre nouveau monstre : ";
-            cin>>newMonsterLifepoints;
-            cout<<"Rentrez le nom de votre nouveau monstre : ";
-            cin>> newMonsterName;
-
-            Monstre monstreEnnemy(newMonsterAttack, newMonsterLifepoints, newMonsterName);
-        }
-
+        //Misc
+        cout<<"____________________ Infos _____________________"<<endl;
         me.printmage();
         ennemy.printmage();
         monMonstre.printmonster();
         monstreEnnemi.printmonster();
+        cout<<"________________________________________________"<<endl<<endl;
     }
 }
