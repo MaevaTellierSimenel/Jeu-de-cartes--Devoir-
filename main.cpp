@@ -34,7 +34,7 @@ int main(){
 
                 cout<<"Vous piochez une carte :"<<endl;
 
-                int carte = rand()%3;
+                int carte = rand()%5;
 
                 if (carte == 1){
                     Monstre monMonstre(10,50,"Carl");
@@ -42,8 +42,16 @@ int main(){
                 else if (carte ==2){
                     Monstre monMonstre(5,20,"Bruh");
                 }
-                else{
+                else if (carte ==3){
                     Monstre monMonstre(10,15,"Brunhilde");
+                }
+                else if (carte ==4) {
+                    cout<<"Vous avez trouvé une carte de soin pour Mage ! Vos points de vie augmentent de 10 !"<<endl;
+                    me.lifeback();
+                }
+                else {
+                    cout<<"Vous avez trouvé une carte de soin pour Monstre ! Ses points de vie augmentent de 10 !"<<endl;
+                    monMonstre.lifeback();
                 }
             }
             else{
@@ -65,8 +73,16 @@ int main(){
                 else if (carte ==2){
                     Monstre monstreEnnemi(5,20,"Bruh");
                 }
-                else{
+                else if (carte ==3){
                     Monstre monstreEnnemi(10,15,"Brunhilde");
+                }
+                else if (carte ==4) {
+                    cout<<"Vous avez trouvé une carte de soin pour Mage ! Vos points de vie augmentent de 10 !"<<endl;
+                    ennemy.lifeback();
+                }
+                else {
+                    cout<<"Vous avez trouvé une carte de soin pour Monstre ! Ses points de vie augmentent de 10 !"<<endl;
+                    monstreEnnemi.lifeback();
                 }
             }
             else{
