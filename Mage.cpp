@@ -70,6 +70,10 @@ void Mage::manaback(){
     (_manapoints) = 10;
 }
 
+void Mage::lifeback(){
+    (_magelifepoints)=(_magelifepoints)+25
+}
+
 void Mage::getmana(){
     return _manapoints;
 }
