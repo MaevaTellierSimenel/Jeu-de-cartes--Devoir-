@@ -15,6 +15,7 @@ class Monstre{
         void attack(int attackUs);
         void damagetook(int attackEnnemy);
         bool testdead();
+        void lifeback();
         void printmonster();
 
         Monstre(int attackscore, int lifepoints, std::string name);
