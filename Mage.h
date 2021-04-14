@@ -14,4 +14,7 @@ class Mage{
         bool getNewMonster();
         bool attackChoice();
         void mageTookDamages();
+        void printmage();
+
+        Mage(std::string magename, int magelifepoints);
 };
